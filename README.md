@@ -6,7 +6,7 @@
 ![img.png](pic/img.png)
 
 ### 数据集
-使用数据集为完整版数据集csl_10k，可以加入群808623966，在群文件中获取
+使用数据集为完整版数据集csl_10k，可以加入群808623966，在群文件中获取，部分数据集可在[CSL数据集](https://github.com/CLUEbenchmark/CLGE#1-csl-%E4%B8%AD%E9%95%BF%E6%96%87%E6%9C%AC%E6%91%98%E8%A6%81%E7%94%9F%E6%88%90) 获取
 
 ### 预训练模型
 预训练模型为[GAU-alpha](https://github.com/ZhuiyiTechnology/GAU-alpha)
@@ -29,9 +29,9 @@ GPU为1060 6G
 ***
 
 ### 模型框架
-felix主体框架为tagging， point network 以及 mlm predict。tagging模型为简单的分类模型，简单的通过BERT+DENSE结构为每一个字分配一个DELETE,KEEP或KEEP|INSERT_NUM的标签，其中INSERT_NUM代表需要插入的字数。  
-point network用于调换字的顺序，其为当前字预测下一个字所在位置，point network为简单的attention结构，即Q*K.T  
-mlm predict又叫insert，在预测阶段，KEEP|INSERT_NUM的标签会解码为`[MASK] [MASK] ... word`的形式，即保留word并在前面插入INSERT_NUM个mask，并通过mlm的形式进行预测  
+felix主体框架为tagging， point network 以及 mlm predict。tagging模型为简单的分类模型，简单的通过BERT+DENSE结构为每一个字分配一个DELETE,KEEP或KEEP|INSERT_NUM的标签，其中INSERT_NUM代表需要插入的字数。</br>
+point network用于调换字的顺序，其为当前字预测下一个字所在位置，point network为简单的attention结构，即Q*K.T</br>
+mlm predict又叫insert，在预测阶段，KEEP|INSERT_NUM的标签会解码为`[MASK] [MASK] ... word`的形式，即保留word并在前面插入INSERT_NUM个mask，并通过mlm的形式进行预测</br>
 
 
 ### 结论

@@ -31,7 +31,7 @@ GPU为1060 6G
 ### 模型框架
 felix主体框架为tagging， point network 以及 mlm predict。tagging模型为简单的分类模型，简单的通过BERT+DENSE结构为每一个字分配一个DELETE,KEEP或KEEP|INSERT_NUM的标签，其中INSERT_NUM代表需要插入的字数。  
 point network用于调换字的顺序，其为当前字预测下一个字所在位置，point network为简单的attention结构，即Q*K.T  
-mlm predict又叫insert，在预测阶段，KEEP|INSERT_NUM的标签会解码为`[MASK] [MASK] ... word`的形式，即保留word并在前面插入INSERT_NUM个mask，并通过mlm的形式进行预测
+mlm predict又叫insert，在预测阶段，KEEP|INSERT_NUM的标签会解码为`[MASK] [MASK] ... word`的形式，即保留word并在前面插入INSERT_NUM个mask，并通过mlm的形式进行预测  
 
 
 ### 结论

@@ -36,4 +36,4 @@ mlm predict又叫insert，在预测阶段，KEEP|INSERT_NUM的标签会解码为
 
 ### 结论
 felix相比之前实现的[lasertagger](https://github.com/hanggun/lasertagger-chinese) 能够覆盖99%的数据集，并不像lasertagger只能覆盖50%左右的数据集，其不受词表限制，词表为BERT自带的词表，理论上拥有较高的泛化性，只要训练数据足够，但是从目前复现的结果来看，仍然存在预测语句不通顺的情况。  
-欢迎一起探讨问题
+欢迎一起探讨问题，联系方式为panshuai2019ps@163.com
